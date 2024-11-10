@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes gradient-text {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 3s linear infinite;
+    -webkit-background-clip: text; /* For text clipping */
+    background-clip: text; /* For text clipping */
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 200% 0%;
+    }
+    50% {
+      background-position: 0% 100%;
+    }
+    100% {
+      background-position: 200% 0%;
+    }
+  }
+  
+  .animate-gradient {
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(15,23,42,1) 100%);
+    background-size: 200% 200%;
+    animation: gradientAnimation 3s ease infinite;
+  }
+  
